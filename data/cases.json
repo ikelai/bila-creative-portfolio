@@ -1,0 +1,279 @@
+{
+  "dell": {
+    "name": "Dell Technologies",
+    "zh": "DELL 科技",
+    "kicker": "Technology · Global Brand",
+    "role": "品牌在地化 · 型錄系統 · EC 內容",
+    "hero": "images/dell/dell-04-DELL_A4_Brochure_Mockup_01.jpg",
+    "summary": "為全球科技品牌 Dell Technologies 建立台灣市場的型錄、EC 與平面製作系統。從國際品牌規範落地到本地執行，以一致、可複用的設計架構，支撐龐大產品線的長期溝通。",
+    "meta": {
+      "Client": "Dell Technologies（必樂為契約主體）",
+      "Scope": "型錄系統 / EC 內容 / 品牌在地化",
+      "Scale": "長期合作 · 15,000+ 檔製作紀錄"
+    },
+    "blocks": [
+      {"h": "問題", "p": ["國際品牌素材與台灣市場需求之間存在巨大落差：產品線橫跨筆電、桌機、伺服器、螢幕與周邊，每一季都有大量型錄、EC 頁面與通路素材需要在地化。", "原廠品牌規範（Brand Identity System）嚴謹且複雜，若沒有穩定的製作系統，每次產出都容易失準、耗時。"], "ul": null},
+      {"h": "方法", "p": ["以品牌規範為基底，建立台灣市場可複用的設計系統：型錄版型、EC 產品頁模板、DM 與通路素材的統一架構。", "以季度為節奏的提案—迭代—完稿流程，確保大量產出維持品質一致。"], "ul": ["A3 型錄提案與多次修提迭代（0617 → 0618 V1/V1.1 → 0818）", "Q1／Q2／Q3 季度型錄完稿與 mockup", "EC 產品頁、Banner 與通路素材在地化"]},
+      {"h": "成果", "p": ["以嚴謹的製作系統支撐全球品牌的台灣市場溝通，讓每一季的大型產出都能準時、一致地交付。"], "ul": null}
+    ],
+    "gallery": [
+      ["images/dell/dell-01-20221212_美圖秀秀_首頁背景_Banner_完稿_OL_V1.jpg", "EC 首頁背景 Banner 完稿"],
+      ["images/dell/dell-03-20230608_DELL_Q2-DM_20面_FA_demo.jpg", "Q2 DM 20 面完稿"],
+      ["images/dell/dell-05-2021_DELL_Q1平面型錄_設計完稿_OL_FA-0604_1.jpg", "Q1 平面型錄完稿"],
+      ["images/dell/dell-06-00-封面.jpg", "型錄封面"]
+    ],
+    "credit": "BILA Creative（必樂創意行銷）承接"
+  },
+  "cathay": {
+    "name": "Cathay Life",
+    "zh": "國泰人壽",
+    "kicker": "Finance · National Brand",
+    "role": "年度數位專案 · 網站 · 社群視覺",
+    "hero": "images/cathay/cathay-03-2025_國泰人壽_banner_0119_02-主視覺篇_FB_1080x10.jpg",
+    "summary": "為台灣大型金融品牌國泰人壽執行年度數位專案：年度回顧網站、社群發文視覺與前端製作規範。以嚴謹的品牌控制與穩定的跨年度流程，支撐大型金融機構的全年溝通。",
+    "meta": {
+      "Client": "國泰人壽（必樂承接）",
+      "Scope": "年度回顧網站 / 社群視覺 / 前端規範",
+      "Scale": "2025–2026 跨年度合作"
+    },
+    "blocks": [
+      {"h": "問題", "p": ["金融品牌對視覺嚴謹度與合規要求極高；年度溝通橫跨官網、社群、Line 等多個觸點，需要一套可沿用、可交接的製作流程。"], "ul": null},
+      {"h": "方法", "p": ["以年度回顧網站為核心，串聯社群發文視覺與前端製作規範；所有素材依 guideline 與授權規範執行，確保跨平台一致。"], "ul": ["年度回顧網站設計與結案報告", "社群發文視覺系列（FB／官網／Line 多尺寸）", "前端製作規範與比稿提案"]},
+      {"h": "成果", "p": ["以穩定的流程支撐大型金融品牌連續兩年的數位溝通，讓品牌在每個觸點都保持一致、可信的形象。"], "ul": null}
+    ],
+    "gallery": [
+      ["images/cathay/cathay-01-2025_國泰人壽_banner_0119_02-主視覺篇_入口網站_550x2.jpg", "主視覺系列 — 入口網站"],
+      ["images/cathay/cathay-02-2025_國泰人壽_banner_0112_FB-官方-發文圖-2(主視覺).jpg", "主視覺系列 — FB 發文"],
+      ["images/cathay/cathay-05-2025_國泰人壽_banner_FB-作者-發文圖-(活動開始)-.jpg", "FB 作者發文圖"],
+      ["images/cathay/cathay-06-2025_國泰人壽_banner_0112_FB-作者-發文圖-(活動開始)-.jpg", "FB 作者發文圖 — 活動開始"]
+    ],
+    "credit": "BILA Creative（必樂創意行銷）承接"
+  },
+  "chicony": {
+    "name": "Chicony Group",
+    "zh": "群光電子",
+    "kicker": "Consumer Electronics · Multi-Brand",
+    "role": "多品牌整合 · 電商 · 內容 · 攝影",
+    "hero": "images/refa/refa-04-REFA聖誕-主視覺-OL-拷貝_官網-1500x767.jpg",
+    "summary": "為台灣電子製造龍頭群光電子管理旗下多個國際消費品牌的在地溝通：TESCOM、ReFa、VENEX、ANKER 等，涵蓋型錄、電商、社群、攝影與通路素材的長期整合。",
+    "meta": {
+      "Client": "群光電子（台灣中型 100 指數成分股）",
+      "Scope": "多品牌 / 電商 / 型錄 / 社群 / 攝影",
+      "Scale": "95,000+ 檔 · 多品牌長期帳戶"
+    },
+    "blocks": [
+      {"h": "問題", "p": ["單一客戶旗下同時營運多個調性迥異的國際品牌：日系美容家電、機能恢復服飾、消費電子。每個品牌都需要符合母品牌調性，又不能彼此混淆。"], "ul": null},
+      {"h": "方法", "p": ["以「客戶—品牌—專案」的管理架構，為每個品牌建立獨立的視覺語言與製作流程，再以統一品質標準串起整個帳戶。"], "ul": ["TESCOM：型錄、形象網站、週年慶與長期 EC 內容", "ReFa：週年慶視覺、聖誕活動、SNS 拍攝與通路素材", "VENEX：台灣 Banner 與在地化活動視覺", "ANKER：EC 商品視覺與通路素材"]},
+      {"h": "成果", "p": ["以長期、多品牌、多通路的整合能力，支撐一個帳戶內數個國際品牌的在地市場溝通。"], "ul": null}
+    ],
+    "gallery": [
+      ["images/tescom/tescom-01-04-產品頁面.jpg", "TESCOM 形象網站 — 產品頁面"],
+      ["images/tescom/tescom-04-TID2510周年慶A4海報_final_OL-01.jpg", "TESCOM 週年慶海報"],
+      ["images/refa/refa-01-1007-refa-週年慶-酷卡_final_橫酷卡-正面.jpg", "ReFa 週年慶酷卡"],
+      ["images/refa/refa-04-REFA聖誕-主視覺-OL-拷貝_官網-1500x767.jpg", "ReFa 聖誕主視覺"],
+      ["images/venex/venex-02-父親節-最新消息banner.jpg", "VENEX 父親節 Banner"],
+      ["images/anker/anker-01-T2190-0703-01.jpg", "ANKER EC 商品視覺"]
+    ],
+    "credit": "BILA Creative（必樂創意行銷）承接"
+  },
+  "sakurayuki": {
+    "name": "Sakurayuki",
+    "zh": "雪之森／櫻雪",
+    "kicker": "Travel · Experience",
+    "role": "品牌網站 · 滑雪學校 · 空間體驗",
+    "hero": "images/sakurayuki/sakurayuki-01-kv_img01.jpg",
+    "summary": "為滑雪、潛水與旅遊體驗品牌建構數位體驗：滑雪王子學校網站、優惠票券系統與品牌視覺，跨越雪季與海洋兩個截然不同的體驗場景。",
+    "meta": {
+      "Client": "雪之森／櫻雪旅行社",
+      "Scope": "品牌網站 / 滑雪學校 / 票券系統",
+      "Scale": "多網站 · 長期合作"
+    },
+    "blocks": [
+      {"h": "問題", "p": ["旅遊體驗品牌同時經營滑雪學校、潛水服務與旅行社業務，每個服務需要獨立入口，卻要共享一致的品牌信任感。"], "ul": null},
+      {"h": "方法", "p": ["以品牌網站為核心，建立服務分入口與優惠票券系統，讓消費者依需求進入不同體驗，同時維持一致的品牌質感。"], "ul": ["滑雪王子學校網站與雪場資訊", "優惠票券、纜車票與住宿券視覺", "跨服務品牌入口設計"]},
+      {"h": "成果", "p": ["讓多樣化的體驗服務在一致的品牌架構下運作，從城市泳池到島嶼深潛都能流暢溝通。"], "ul": null}
+    ],
+    "gallery": [
+      ["images/sakurayuki/sakurayuki-01-kv_img01.jpg", "品牌 KV"],
+      ["images/sakurayuki/sakurayuki-03-首頁_優惠_租借券.jpg", "優惠 — 租借券"],
+      ["images/sakurayuki/sakurayuki-04-首頁_優惠_纜車票.jpg", "優惠 — 纜車票"],
+      ["images/sakurayuki/sakurayuki-05-YOYO.jpg", "形象素材"]
+    ],
+    "credit": "BILA Creative（必樂創意行銷）承接"
+  },
+  "juheng": {
+    "name": "Juheng International",
+    "zh": "鉅亨國際",
+    "kicker": "Finance · Content",
+    "role": "官網經營 · 內容視覺 · 品牌企劃",
+    "hero": "images/juheng/juheng-01-鉅亨國際-官網經營維護_方案書_0824-08.jpg",
+    "summary": "為金融投資顧問品牌鉅亨國際經營官網與內容：黃金、比特幣、私人銀行等深度主題的長文視覺與品牌企劃，把複雜金融知識轉化為易讀、可信的內容體驗。",
+    "meta": {
+      "Client": "鉅亨國際",
+      "Scope": "官網 / 長文視覺 / 品牌企劃",
+      "Scale": "內容型網站 · 深度長文"
+    },
+    "blocks": [
+      {"h": "問題", "p": ["金融投資內容專業門檻高，若沒有好的視覺轉譯，長文與數據很容易勸退讀者。"], "ul": null},
+      {"h": "方法", "p": ["以品牌企劃為核心，將黃金、比特幣、私人銀行等主題製作成結構清楚的長文視覺與官網內容，讓專業知識成為可閱讀的品牌資產。"], "ul": ["官網經營維護方案書", "深度主題長文視覺（黃金交易等）", "品牌與內容企劃"]},
+      {"h": "成果", "p": ["把高門檻的金融內容變成能長期經營的官網內容，客戶也能從中學習與應用。"], "ul": null}
+    ],
+    "gallery": [
+      ["images/juheng/juheng-01-鉅亨國際-官網經營維護_方案書_0824-08.jpg", "官網經營維護方案書"],
+      ["images/juheng/juheng-02-鉅亨國際-官網經營維護_方案書_0824-10.jpg", "方案書內頁"],
+      ["images/juheng/juheng-03-國際貿易動盪最保值的黃金交易-01.jpg", "黃金交易長文視覺"],
+      ["images/juheng/juheng-04-國際貿易動盪最保值的黃金交易-08.jpg", "長文視覺內頁"]
+    ],
+    "credit": "BILA Creative（必樂創意行銷）承接"
+  },
+  "yingsheng": {
+    "name": "Ying Sheng",
+    "zh": "迎盛",
+    "kicker": "B2B · Corporate",
+    "role": "企業型錄 · 影像重整 · 周年識別",
+    "hero": "images/yingsheng/yingsheng-01-迎盛-BLIKSEN-型錄設計方案書_1204-01.jpg",
+    "summary": "為製造企業迎盛重整企業溝通：從封面主視覺到內頁，將雜亂的客戶照片重新分色處理，並完成周年識別設計。",
+    "meta": {
+      "Client": "迎盛股份有限公司",
+      "Scope": "企業型錄 / 影像處理 / 周年識別",
+      "Scale": "型錄 + 識別系統"
+    },
+    "blocks": [
+      {"h": "問題", "p": ["企業型錄最大的挑戰不是排版，而是素材：大量雜亂、色調不一的客戶照片，必須先重整才能成為專業的企業門面。"], "ul": null},
+      {"h": "方法", "p": ["從封面主視覺到內頁，逐張重新分色與整理客戶照片，建立一致的影像語言；同時完成周年識別與 Logo 系統。"], "ul": ["型錄設計方案書與多輪提案", "客戶照片分色重整", "周年 Logo 與識別系統"]},
+      {"h": "成果", "p": ["把原本雜亂的企業素材，重整成一本專業、耐看的企業型錄。"], "ul": null}
+    ],
+    "gallery": [
+      ["images/yingsheng/yingsheng-01-迎盛-BLIKSEN-型錄設計方案書_1204-01.jpg", "型錄設計方案書"],
+      ["images/yingsheng/yingsheng-02-迎盛-BLIKSEN-型錄設計方案書-01.jpg", "方案書 — 封面"],
+      ["images/yingsheng/yingsheng-03-1226.jpg", "型錄內頁"],
+      ["images/yingsheng/yingsheng-05-30-LOGO.jpg", "Logo 系統"]
+    ],
+    "credit": "BILA Creative（必樂創意行銷）承接"
+  },
+  "laisen": {
+    "name": "Laisen Animal Hospital",
+    "zh": "萊森寵物醫院",
+    "kicker": "Healthcare · Service",
+    "role": "品牌網站 · 空間攝影 · 信任溝通",
+    "hero": "images/laisen/laisen-01-首頁_KV.jpg",
+    "summary": "為萊森寵物醫院建構品牌網站：從首頁主視覺、服務介紹到空間與課程攝影，把專業醫療與溫暖照護整合成一致的數位體驗。",
+    "meta": {
+      "Client": "萊森寵物醫院",
+      "Scope": "品牌網站 / 空間攝影 / 主視覺",
+      "Scale": "網站 + 影像整合"
+    },
+    "blocks": [
+      {"h": "問題", "p": ["寵物醫療品牌需要同時傳達專業與溫暖——太冷顯得疏離，太甜又失去醫療可信度。"], "ul": null},
+      {"h": "方法", "p": ["以首頁主視覺定調，搭配空間、實作教室與課程花絮的現場攝影，讓訪客在進門前就感受到醫院環境與服務品質。"], "ul": ["首頁 KV 與主視覺系統", "官網空間與課程攝影", "服務架構與頁面設計"]},
+      {"h": "成果", "p": ["網站上線後客戶非常滿意——以真實環境影像建立信任，是專業服務品牌最有效的溝通。"], "ul": null}
+    ],
+    "gallery": [
+      ["images/laisen/laisen-01-首頁_KV.jpg", "首頁 KV"],
+      ["images/laisen/laisen-03-講座區(2).jpg", "講座區空間"],
+      ["images/laisen/laisen-04-實作教室(1)-0.jpg", "實作教室"],
+      ["images/laisen/laisen-02-首頁_KV.jpg", "主視覺延伸"]
+    ],
+    "credit": "BILA Creative（必樂創意行銷）承接"
+  },
+  "jufenzi": {
+    "name": "MuCover",
+    "zh": "聚動分子",
+    "kicker": "Health · Packaging",
+    "role": "包裝設計 · 刀模 · 提案",
+    "hero": "images/jufenzi/jufenzi-01-2024_0919_Oral-Patch-it_Package-Design_F.jpg",
+    "summary": "為健康生活品牌聚動分子執行系列包裝設計：口腔貼片等產品的包裝、刀模與 A5 DM，從提案到完稿結案完整交付。",
+    "meta": {
+      "Client": "聚動分子",
+      "Scope": "包裝設計 / 刀模 / DM",
+      "Scale": "系列產品包裝"
+    },
+    "blocks": [
+      {"h": "問題", "p": ["健康產品包裝需要在藥感與生活感之間取得平衡——既不能太醫療，也不能失去功能可信度。"], "ul": null},
+      {"h": "方法", "p": ["從產品特性出發，以清晰、誠實的視覺語言設計包裝與輔助溝通素材，並完成刀模與結案文件。"], "ul": ["Oral Patch-it 包裝設計 FA", "口K繃刀模與包裝", "A5 DM 系列"]},
+      {"h": "成果", "p": ["完整的包裝設計交付：從提案、刀模到完稿結案，一套可量產的品牌包裝。"], "ul": null}
+    ],
+    "gallery": [
+      ["images/jufenzi/jufenzi-01-2024_0919_Oral-Patch-it_Package-Design_F.jpg", "Oral Patch-it 包裝完稿"],
+      ["images/jufenzi/jufenzi-03-2024_MuCover_A5-DM_FA_OL_1.jpg", "A5 DM"],
+      ["images/jufenzi/jufenzi-05-20230213_口K繃刀膜-01.jpg", "刀膜設計"],
+      ["images/jufenzi/jufenzi-04-2024_MuCover_A5-DM_FA_OL_B.jpg", "A5 DM 系列"]
+    ],
+    "credit": "BILA Creative（必樂創意行銷）承接"
+  },
+  "onpro": {
+    "name": "ONPRO",
+    "zh": "鴻普光電",
+    "kicker": "Consumer Tech · Retail",
+    "role": "品牌整合 · EC · 包裝 · 產品攝影",
+    "hero": "images/onpro/onpro-01-140620-HS68本體-OL-TW-151117-01.jpg",
+    "summary": "為消費科技品牌 ONPRO 執行長期整合：EC 內容、包裝、產品攝影、型錄與名片系統，以大量、穩定的產出支撐品牌的零售與電商通路。",
+    "meta": {
+      "Client": "鴻普光電 ONPRO",
+      "Scope": "EC / 包裝 / 產品攝影 / 型錄",
+      "Scale": "8,000+ 檔 · 長期帳戶"
+    },
+    "blocks": [
+      {"h": "問題", "p": ["消費電子品牌需要支撐電商、通路與包裝的大量視覺產出，且必須在品牌一致性與產量之間取得平衡。"], "ul": null},
+      {"h": "方法", "p": ["以品牌系統為基礎，建立 EC 內容、包裝、產品攝影與型錄的標準流程，讓大量產出維持品質。"], "ul": ["EC 商品視覺與內容", "產品包裝與攝影", "型錄、DM 與名片系統"]},
+      {"h": "成果", "p": ["長期、大量、一致的品牌視覺產出，支撐消費科技品牌的零售與電商通路。"], "ul": null}
+    ],
+    "gallery": [
+      ["images/onpro/onpro-01-140620-HS68本體-OL-TW-151117-01.jpg", "產品視覺 — HS68"],
+      ["images/onpro/onpro-02-140620-MB-M12本體-OL-TW-151117-01.jpg", "產品視覺 — M12"],
+      ["images/onpro/onpro-03-newspaper-mockup-4-01-1.jpg", "報紙稿 mockup"],
+      ["images/onpro/onpro-04-ONPRO-namecard-final-OL_rebecca.jpg", "名片系統"]
+    ],
+    "credit": "BILA Creative（必樂創意行銷）承接"
+  },
+  "rizap": {
+    "name": "RIZAP",
+    "zh": "RIZAP 健身",
+    "kicker": "Fitness · Japan",
+    "role": "Landing Page · 網站 · Campaign",
+    "hero": "images/rizap/rizap-01-landing-page_FINAL_1.jpg",
+    "summary": "為日本高階健身品牌 RIZAP 製作 Landing Page 與網站視覺：以強烈的前後對比與課程邏輯，支援品牌在台灣市場的溝通。",
+    "meta": {
+      "Client": "RIZAP",
+      "Scope": "Landing Page / 網站 / Campaign",
+      "Scale": "日系品牌 · 台灣市場"
+    },
+    "blocks": [
+      {"h": "問題", "p": ["高階健身品牌需要讓潛在客戶在一個頁面內完成「理解—信任—行動」的轉換。"], "ul": null},
+      {"h": "方法", "p": ["以 Landing Page 為核心，用清晰的課程結構與成果語言設計視覺，支援品牌在台灣的推廣。"], "ul": ["Landing Page 設計（多版本）", "網站與 Campaign 視覺", "Banner 與社群素材"]},
+      {"h": "成果", "p": ["以轉換為導向的頁面設計，支撐日系健身品牌在台灣市場的溝通。"], "ul": null}
+    ],
+    "gallery": [
+      ["images/rizap/rizap-01-landing-page_FINAL_1.jpg", "Landing Page — 首屏"],
+      ["images/rizap/rizap-02-landing-page_FINAL_2.jpg", "Landing Page — 內文"],
+      ["images/rizap/rizap-03-landing-page_FINAL_3.jpg", "Landing Page — 課程"],
+      ["images/rizap/rizap-04-demo-1.jpg", "視覺延伸"]
+    ],
+    "credit": "BILA Creative（必樂創意行銷）承接"
+  },
+  "weishiduo": {
+    "name": "Wisco",
+    "zh": "偉士多",
+    "kicker": "Lifestyle · Brand",
+    "role": "品牌整合 · 包裝 · 網站 · 棚拍",
+    "hero": "images/weishiduo/weishiduo-01-面膜彩盒設計＿完稿＿final＿OL_面膜包裝(保濕).jpg",
+    "summary": "為生活用品品牌偉士多執行品牌整合：Logo 系統、面膜包裝、產品 DM、網站素材與棚拍，從品牌到通路的完整服務。",
+    "meta": {
+      "Client": "偉士多",
+      "Scope": "品牌 / 包裝 / 網站 / 棚拍",
+      "Scale": "5,000+ 檔 · 品牌到通路"
+    },
+    "blocks": [
+      {"h": "問題", "p": ["生活用品品牌橫跨多個產品線，需要一致的品牌語言串聯包裝、DM、網站與通路素材。"], "ul": null},
+      {"h": "方法", "p": ["以 Logo 系統與包裝規範為核心，串聯產品棚拍、DM 與網站素材，讓每個觸點都維持一致。"], "ul": ["Logo 與標準字系統", "面膜彩盒設計與完稿", "產品 DM、網站 Banner 與棚拍"]},
+      {"h": "成果", "p": ["從品牌到通路的完整整合，讓多產品線在一致的視覺語言下運作。"], "ul": null}
+    ],
+    "gallery": [
+      ["images/weishiduo/weishiduo-01-面膜彩盒設計＿完稿＿final＿OL_面膜包裝(保濕).jpg", "面膜彩盒 — 保濕"],
+      ["images/weishiduo/weishiduo-02-面膜彩盒設計＿完稿＿final＿OL_面膜包裝(內袋).jpg", "面膜彩盒 — 內袋"],
+      ["images/weishiduo/weishiduo-04-0815-A4產品DM-個人用-final_OL_個人用—layout.jpg", "A4 產品 DM"],
+      ["images/weishiduo/weishiduo-05-0815-A4產品DM-個人用-final_OL_個人用—正面.jpg", "產品 DM — 正面"]
+    ],
+    "credit": "BILA Creative（必樂創意行銷）承接"
+  }
+}
