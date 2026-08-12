@@ -1,150 +1,66 @@
-/* BILA Creative — 設計系統（基於 sy-dive 設計語言） */
+/* BILA Creative — yhhydesign 風格 */
 :root{
-  --night:#0e1012;
-  --night-soft:#15181a;
-  --fog:#d9dcd7;
-  --soft:#8a8f8b;
-  --pink:#e36d9c;
-  --line:rgba(255,255,255,.12);
+  --bg:#fff;
+  --ink:#1a1a1a;
+  --soft:#999;
+  --line:rgba(0,0,0,.08);
   --accent:#c75b4a;
-  --sans:Manrope,"Noto Sans TC","PingFang TC",sans-serif;
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{margin:0;background:var(--night);color:var(--fog);font-family:var(--sans);-webkit-font-smoothing:antialiased;line-height:1.82;letter-spacing:.02em}
+body{background:var(--bg);color:var(--ink);font-family:Karla,"Noto Sans TC","PingFang TC",sans-serif;font-weight:300;-webkit-font-smoothing:antialiased;font-size:13px;line-height:1.7}
 img{display:block;max-width:100%}
 a{color:inherit;text-decoration:none}
+a:hover{opacity:.55}
 
-/* ── nav ── */
-.top-bar{position:fixed;z-index:50;inset:0 0 auto;display:flex;align-items:center;justify-content:space-between;padding:28px 5vw;border-bottom:1px solid var(--line);background:rgba(14,16,18,.88);backdrop-filter:blur(16px)}
-.top-bar .logo{font-size:13px;font-weight:400;letter-spacing:.3em;text-transform:uppercase}
-.top-bar .zh{font-size:9px;letter-spacing:.28em;opacity:.5;margin-left:18px}
-.top-bar nav{display:flex;gap:28px;font-size:10px;letter-spacing:.22em;text-transform:uppercase}
-.top-bar nav a{opacity:.6;transition:opacity .3s}
-.top-bar nav a:hover,.top-bar nav a.active{opacity:1}
+/* ── 佈局：左 sidebar + 右內容 ── */
+.layout{display:flex;min-height:100svh}
+.sidebar{width:22%;min-width:180px;position:fixed;top:0;left:0;height:100svh;overflow-y:auto;padding:22px 18px 40px;display:flex;flex-direction:column;border-right:1px solid var(--line);background:var(--bg);z-index:20}
+.sidebar .logo{margin-bottom:28px;display:block}
+.sidebar .logo img{width:100%;max-width:180px;height:auto}
+.sidebar .logo-text{font-size:15px;font-weight:400;letter-spacing:.26em;text-transform:uppercase}
+.sidebar .logo-sub{font-size:9px;letter-spacing:.22em;color:var(--soft);margin-top:4px}
+.sidebar nav{display:flex;flex-direction:column;gap:6px;font-size:11px;letter-spacing:.06em;flex:1;overflow-y:auto}
+.sidebar nav a{display:block;padding:3px 0}
+.sidebar nav a.active{opacity:.35}
+.sidebar hr{border:none;border-top:1px solid var(--line);margin:14px 0}
+.sidebar .section-label{font-size:9px;letter-spacing:.16em;color:var(--soft);text-transform:uppercase;margin:8px 0 4px}
+.sidebar .copy{font-size:9px;color:var(--soft);margin-top:auto;padding-top:20px}
 
-/* ── hero ── */
-.hero{min-height:100svh;position:relative;overflow:hidden;display:flex;align-items:flex-end;padding:0 6vw 9vh}
-.hero:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(10,12,14,.94) 0%,rgba(10,12,14,.55) 48%,rgba(10,12,14,.12)),linear-gradient(0deg,rgba(10,12,14,.7),transparent 48%);z-index:1}
-.hero img.hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:saturate(.7) brightness(.65)}
-.hero-content{position:relative;z-index:2;max-width:1100px}
-.hero .eyebrow{font-size:9px;letter-spacing:.42em;text-transform:uppercase;opacity:.55;margin-bottom:24px}
-.hero h1{font-size:clamp(60px,9.4vw,148px);font-weight:200;line-height:.97;letter-spacing:-.035em;max-width:1120px}
-.hero h1 em{font-style:normal;color:var(--accent)}
-.hero .sub{margin-top:42px;max-width:560px;font-size:13px;line-height:2.1;opacity:.6;font-weight:300}
-.hero .clients{display:flex;flex-wrap:wrap;gap:10px 32px;margin-top:60px;padding-top:24px;border-top:1px solid var(--line);font-size:10px;letter-spacing:.26em;opacity:.5;text-transform:uppercase}
-.hero .arrow{position:absolute;right:6vw;bottom:6vh;z-index:2;font-size:12px;letter-spacing:.3em;opacity:.4}
+/* ── 主內容 ── */
+.main{margin-left:22%;flex:1;display:flex;flex-direction:column}
+.main-header{padding:22px 28px 18px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:baseline}
+.main-header h1{font-size:13px;font-weight:400;letter-spacing:.08em}
+.main-header .count{font-size:10px;color:var(--soft)}
 
-/* ── 章節 ── */
-.section{padding:140px 6vw}
-.section .label{font-size:9px;letter-spacing:.36em;text-transform:uppercase;opacity:.45;margin-bottom:38px}
-.section h2{font-size:clamp(40px,6.6vw,96px);font-weight:200;line-height:1.22;letter-spacing:-.03em;max-width:1000px}
-.section h2 span{color:var(--accent)}
-.section .lede{max-width:580px;margin:36px 0 0;font-size:13px;opacity:.58;line-height:2.1;font-weight:300}
+/* ── 作品網格 ── */
+.gallery{display:grid;grid-template-columns:repeat(2,1fr)}
+.gallery-item{position:relative;aspect-ratio:4/3;overflow:hidden;border-right:1px solid var(--bg);border-bottom:1px solid var(--bg);background:#f0eee9}
+.gallery-item img{width:100%;height:100%;object-fit:cover;transition:transform .6s cubic-bezier(.16,1,.3,1)}
+.gallery-item:hover img{transform:scale(1.04)}
+.gallery-item .gi-label{position:absolute;bottom:16px;left:16px;z-index:2;font-size:12px;font-weight:400;color:#fff;text-shadow:0 1px 3px rgba(0,0,0,.6)}
+.gallery-item .gi-tag{position:absolute;top:16px;right:16px;z-index:2;font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.7);text-shadow:0 1px 2px rgba(0,0,0,.5)}
+.gallery-item:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(0,0,0,.4),transparent 55%);z-index:1;pointer-events:none;transition:opacity .4s}
+.gallery-item:hover:after{opacity:.5}
 
-/* ── 案例網格（首頁 + 作品總覽）── */
-.work-grid{margin-top:90px;display:grid;grid-template-columns:1fr 1fr;gap:0}
-.work-card{position:relative;overflow:hidden;min-height:620px;border-bottom:1px solid var(--line)}
-.work-card:nth-child(odd){border-right:1px solid var(--line)}
-.work-card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:saturate(.55) brightness(.55);transition:transform 1.2s cubic-bezier(.16,1,.3,1)}
-.work-card:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(10,12,14,.92),transparent 58%);transition:opacity .5s;z-index:1}
-.work-card:hover img{transform:scale(1.04)}
-.work-card-content{position:absolute;z-index:2;inset:auto 3vw 3vw}
-.work-card .w-index{font-size:9px;letter-spacing:.36em;text-transform:uppercase;opacity:.45;margin-bottom:18px}
-.work-card .w-name{font-size:clamp(36px,4.8vw,62px);font-weight:200;letter-spacing:-.03em;line-height:1.05;margin-bottom:14px}
-.work-card .w-role{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);margin-bottom:16px}
-.work-card .w-desc{font-size:12px;opacity:.55;line-height:1.9;max-width:420px}
-.work-card .w-cta{margin-top:32px;border-top:1px solid rgba(255,255,255,.35);padding-top:16px;display:flex;justify-content:space-between;font-size:9px;letter-spacing:.28em;text-transform:uppercase}
-.work-card .w-cta b{font-size:17px;font-weight:200;transition:transform .3s}
-.work-card:hover .w-cta b{transform:translateX(7px)}
+/* ── 案例內頁 ── */
+.case-page{padding:22px 28px 60px;max-width:1100px}
+.case-page h1{font-size:clamp(22px,3vw,36px);font-weight:400;letter-spacing:.04em;margin-bottom:4px}
+.case-page .cp-tag{font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:var(--soft);margin-bottom:28px}
+.case-page .cp-images{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin-bottom:36px}
+.case-page .cp-images img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.case-page .cp-images .wide{grid-column:1/-1;aspect-ratio:16/7}
+.case-page .cp-text{max-width:600px;font-size:12px;line-height:2.1;color:var(--soft)}
+.case-page .cp-credit{font-size:9px;color:var(--soft);margin-top:28px;padding-top:16px;border-top:1px solid var(--line)}
 
-/* ── 案例內頁 Hero ── */
-.case-hero{min-height:92svh;position:relative;overflow:hidden;display:flex;align-items:flex-end;padding:0 6vw 8vh}
-.case-hero:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(10,12,14,.96),rgba(10,12,14,.6) 52%,rgba(10,12,14,.15));z-index:1}
-.case-hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:saturate(.6) brightness(.58)}
-.case-hero-content{position:relative;z-index:2;max-width:900px}
-.case-hero .kicker{font-size:9px;letter-spacing:.42em;text-transform:uppercase;opacity:.5}
-.case-hero h1{font-size:clamp(48px,7.6vw,110px);font-weight:200;line-height:1;letter-spacing:-.035em;margin:22px 0 20px}
-.case-hero h1 .zh{color:var(--accent)}
-.case-hero .role{font-size:11px;letter-spacing:.26em;text-transform:uppercase;opacity:.55;margin-bottom:30px}
-.case-hero .summary{max-width:620px;font-size:13px;opacity:.6;line-height:2.1;font-weight:300}
-.case-meta{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;padding:64px 6vw;border-bottom:1px solid var(--line)}
-.case-meta .m-label{font-size:9px;letter-spacing:.3em;text-transform:uppercase;opacity:.4;margin-bottom:10px}
-.case-meta .m-val{font-size:13px;opacity:.7;line-height:2}
+/* ── 聯絡頁 ── */
+.contact-page{display:flex;flex-direction:column;justify-content:center;align-items:flex-start;padding:22px 28px;min-height:60svh}
+.contact-page .mail{font-size:clamp(18px,2.6vw,28px);font-weight:400;letter-spacing:.04em;border-bottom:1px solid var(--ink);padding-bottom:4px;margin-bottom:10px;display:inline-block}
+.contact-page .sub{font-size:11px;color:var(--soft)}
 
-/* ── 案例段落 ── */
-.case-body{padding:120px 6vw}
-.case-block{max-width:720px;margin:0 auto 100px}
-.case-block h2{font-size:28px;font-weight:200;letter-spacing:-.02em;margin-bottom:28px;color:var(--accent)}
-.case-block p{font-size:13px;opacity:.6;line-height:2.2;font-weight:300;margin-bottom:16px}
-.case-block ul{margin:20px 0 0 0;padding-left:1.2em;list-style:none}
-.case-block ul li{font-size:13px;opacity:.6;line-height:2.2;font-weight:300;padding:4px 0}
-.case-block ul li:before{content:"— ";opacity:.35}
-
-/* ── 作品圖牆 ── */
-.case-gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin:0 auto 100px;max-width:1200px}
-.case-gallery figure{overflow:hidden;background:var(--night-soft)}
-.case-gallery img{width:100%;height:auto;min-height:260px;object-fit:cover;filter:brightness(.88);transition:filter .4s}
-.case-gallery img:hover{filter:brightness(1)}
-.case-gallery figcaption{font-size:9px;opacity:.4;padding:10px 4px;letter-spacing:.1em}
-.gallery-wide{grid-column:1/-1}
-
-/* ── CTA band ── */
-.cta-band{min-height:70svh;display:flex;flex-direction:column;justify-content:center;padding:100px 6vw;background:var(--night-soft);border-top:1px solid var(--line)}
-.cta-band h2{font-size:clamp(36px,5.8vw,76px);font-weight:200;line-height:1.2;letter-spacing:-.025em;max-width:760px}
-.cta-band .mail{display:inline-block;margin-top:46px;font-size:10px;letter-spacing:.32em;text-transform:uppercase;border-bottom:1px solid rgba(255,255,255,.45);padding-bottom:8px;transition:opacity .3s}
-.cta-band .mail:hover{opacity:.7}
-
-/* ── manifesto 複段落 ── */
-.manifesto{min-height:84svh;display:flex;flex-direction:column;justify-content:center;padding:120px 6vw;background:var(--night-soft)}
-.manifesto .label{font-size:9px;letter-spacing:.36em;color:var(--soft);margin-bottom:46px}
-.manifesto h2{font-size:clamp(38px,6vw,88px);font-weight:200;line-height:1.28;letter-spacing:-.025em;max-width:900px;margin-bottom:42px;color:var(--fog)}
-.manifesto h2 span{color:var(--accent)}
-.manifesto .copy{max-width:560px;font-size:13px;opacity:.55;line-height:2.2;font-weight:300}
-.manifesto .copy strong{color:var(--fog);font-weight:400}
-.manifesto .byline{margin-top:56px;font-size:9px;letter-spacing:.3em;opacity:.4;border-top:1px solid var(--line);padding-top:28px;display:flex;align-items:center;gap:18px}
-.manifesto .byline:before{content:"";width:48px;height:1px;background:var(--soft)}
-
-/* ── 服務清單 ── */
-.svc-list{margin-top:70px;border-top:1px solid var(--line)}
-.svc{display:grid;grid-template-columns:80px 1fr 1.5fr;gap:30px;padding:40px 0;border-bottom:1px solid var(--line);align-items:baseline}
-.svc .s-num{font-size:9px;letter-spacing:.3em;opacity:.35}
-.svc .s-name{font-size:clamp(18px,2.2vw,26px);font-weight:300}
-.svc .s-desc{font-size:12px;opacity:.5;line-height:2;font-weight:300}
-
-/* ── 頁尾 ── */
-.site-foot{display:flex;justify-content:space-between;align-items:flex-end;padding:52px 6vw;border-top:1px solid var(--line);background:var(--night);gap:30px;flex-wrap:wrap}
-.site-foot .f-brand{font-size:12px;letter-spacing:.24em;text-transform:uppercase}
-.site-foot .f-brand span{font-size:9px;letter-spacing:.22em;opacity:.4;display:block;margin-top:6px}
-.site-foot .f-meta{font-size:9px;opacity:.35;line-height:2;text-align:right}
-.site-foot .f-links{display:flex;gap:24px;font-size:9px;letter-spacing:.22em;text-transform:uppercase;opacity:.4}
-.site-foot .f-links a:hover{opacity:1}
-
-/* ── 簡單頁（about, services 頂部）── */
-.page-top{min-height:60svh;display:flex;flex-direction:column;justify-content:flex-end;padding:0 6vw 7vh}
-.page-top .eyebrow{font-size:9px;letter-spacing:.42em;text-transform:uppercase;opacity:.45;margin-bottom:28px}
-.page-top h1{font-size:clamp(48px,7.6vw,108px);font-weight:200;line-height:1.04;letter-spacing:-.035em}
-.page-top h1 em{font-style:normal;color:var(--accent)}
-.page-top .sub{max-width:580px;margin-top:32px;font-size:13px;opacity:.55;line-height:2.1;font-weight:300}
-
-/* ── 響應式 ── */
-@media(max-width:820px){
-  .top-bar{padding:20px 24px;gap:12px}
-  .top-bar .zh{display:none}
-  .top-bar nav{gap:20px}
-  .hero{padding:0 24px 48px}
-  .hero h1{font-size:clamp(44px,13vw,64px)}
-  .work-grid{grid-template-columns:1fr}
-  .work-card:nth-child(odd){border-right:none}
-  .work-card{min-height:480px}
-  .section{padding:100px 24px}
-  .case-hero{padding:0 24px 52px}
-  .case-hero h1{font-size:clamp(38px,11vw,56px)}
-  .case-meta{grid-template-columns:1fr;gap:24px;padding:40px 24px}
-  .case-body{padding:80px 24px}
-  .case-gallery{grid-template-columns:1fr}
-  .manifesto{padding:100px 24px}
-  .svc{grid-template-columns:1fr;gap:12px;padding:28px 0}
-  .site-foot{flex-direction:column;align-items:flex-start;gap:20px;padding:40px 24px}
-  .site-foot .f-meta{text-align:left}
+/* ── RWD ── */
+@media(max-width:700px){
+  .sidebar{width:28%;min-width:130px;padding:16px 12px 30px;font-size:10px}
+  .main{margin-left:28%}
+  .gallery{grid-template-columns:1fr}
 }
