@@ -56,6 +56,11 @@ a:hover{opacity:.55}
 .case-footer .cf-credit{display:flex;gap:2rem}
 .case-footer a:hover{color:var(--ink)}
 
+
+/* ── 品牌分段標題 ── */
+.stream-section{padding:3.5rem 2.5rem .8rem;border-top:1px solid var(--line);margin-top:2rem}
+.stream-section .ss-brand{font-size:18px;font-weight:600;letter-spacing:.04em}
+.stream-section .ss-tag{display:block;font-size:10px;color:var(--soft);margin-top:4px;letter-spacing:.04em}
 @media(max-width:760px){
   .sidebar{width:28%;min-width:120px;padding:2rem 1.2rem 2rem}
   .main{margin-left:28%}

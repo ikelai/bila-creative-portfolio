@@ -158,7 +158,47 @@
       "images/venex/venex-01-手機版banner.jpg",
       "images/venex/venex-02-父親節-最新消息banner.jpg"
     ],
-    "credit": "BILA Creative（必樂創意行銷）承接"
+    "credit": "BILA Creative（必樂創意行銷）承接",
+    "brand_sections": [
+      {
+        "brand": "TESCOM",
+        "tag": "日本美容家電品牌 · 型錄／網站／EC",
+        "images": [
+          "images/tescom/tescom-01-04-產品頁面.jpg",
+          "images/tescom/tescom-02-04-產品頁面.jpg",
+          "images/tescom/tescom-03-12+3保固延長-操作ec-01.jpg",
+          "images/tescom/tescom-04-TID2510周年慶A4海報_final_OL-01.jpg",
+          "images/tescom/tescom-05-KV__TCD4000TW.jpg"
+        ]
+      },
+      {
+        "brand": "ReFa",
+        "tag": "日本高階美容品牌 · 活動／攝影／通路",
+        "images": [
+          "images/refa/refa-01-1007-refa-週年慶-酷卡_final_橫酷卡-正面.jpg",
+          "images/refa/refa-02-1007-refa-週年慶-酷卡_final_橫酷卡-背面.jpg",
+          "images/refa/refa-03-1007-refa-週年慶-酷卡_final_直酷卡-正面.jpg",
+          "images/refa/refa-04-REFA聖誕-主視覺-OL-拷貝_官網-1500x767.jpg",
+          "images/refa/refa-05-REFA聖誕-主視覺-OL-拷貝_官網-764x857-手機版.jpg"
+        ]
+      },
+      {
+        "brand": "ANKER",
+        "tag": "國際消費電子品牌 · EC／零售通路",
+        "images": [
+          "images/anker/anker-01-T2190-0703-01.jpg",
+          "images/anker/anker-02-T2190-0703-02.jpg"
+        ]
+      },
+      {
+        "brand": "VENEX",
+        "tag": "日本 Recovery Wear · 攝影／官網內容",
+        "images": [
+          "images/venex/venex-01-手機版banner.jpg",
+          "images/venex/venex-02-父親節-最新消息banner.jpg"
+        ]
+      }
+    ]
   },
   "sakurayuki": {
     "name": "Sakurayuki",
