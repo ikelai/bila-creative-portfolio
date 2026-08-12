@@ -1,8 +1,8 @@
-/* BILA Creative — yhhydesign 精確克隆 */
+/* BILA Creative — yhhydesign layout + Behance case pages */
 :root{
   --bg:#fff;
   --ink:#1a1a1a;
-  --soft:rgba(0,0,0,.55);
+  --soft:rgba(0,0,0,.5);
   --line:rgba(0,0,0,.06);
 }
 *{box-sizing:border-box;margin:0;padding:0}
@@ -15,8 +15,8 @@ a:hover{opacity:.55}
 /* ── 佈局 ── */
 .layout{display:flex;min-height:100svh}
 
-/* ── Sidebar（22%）── */
-.sidebar{width:22%;min-width:180px;position:fixed;top:0;left:0;height:100svh;overflow-y:auto;padding:2.5rem 2rem 3rem;display:flex;flex-direction:column;background:var(--bg);border-right:1px solid rgba(0,0,0,.06);z-index:20}
+/* ── Sidebar ── */
+.sidebar{width:22%;min-width:180px;position:fixed;top:0;left:0;height:100svh;overflow-y:auto;padding:2.5rem 2rem 3rem;display:flex;flex-direction:column;background:var(--bg);border-right:1px solid var(--line);z-index:20}
 .sidebar .logo{font-size:16px;font-weight:400;letter-spacing:.2em;text-transform:uppercase;margin-bottom:2.8rem;display:block}
 .sidebar .logo-sub{font-size:9px;letter-spacing:.16em;color:var(--soft);display:block;margin-top:4px}
 .sidebar nav{display:flex;flex-direction:column;gap:4px;font-size:11px;letter-spacing:.04em;flex:1}
@@ -27,10 +27,10 @@ a:hover{opacity:.55}
 .sidebar .copy{font-size:9px;color:var(--soft);margin-top:auto;padding-top:2rem}
 
 /* ── 主內容 ── */
-.main{margin-left:22%;flex:1;padding:2.5rem}
+.main{margin-left:22%;flex:1}
 
-/* ── Thumbnails 網格 ── */
-.thumbs{display:grid;grid-template-columns:repeat(2,1fr);margin:-1rem}
+/* ── 首頁 Thumbnails ── */
+.thumbs{display:grid;grid-template-columns:repeat(2,1fr);margin:-1rem;padding:2.5rem}
 .thumb{padding:1rem}
 .thumb-img{position:relative;aspect-ratio:4/3;overflow:hidden;background:#f5f3ee;outline:1px solid rgba(0,0,0,.06);outline-offset:-1px}
 .thumb-img img{width:100%;height:100%;object-fit:cover;transition:transform .5s cubic-bezier(.16,1,.3,1)}
@@ -39,28 +39,27 @@ a:hover{opacity:.55}
 .thumb .tags{margin-top:.2rem;font-size:10px;color:var(--soft);letter-spacing:.04em}
 .thumb .tags span{display:inline-block;margin-right:.8rem}
 
-/* ── 案例內頁 ── */
-.case-page{padding:0;max-width:100%}
-.case-page .cp-hero{aspect-ratio:16/7;overflow:hidden;background:#f5f3ee}
-.case-page .cp-hero img{width:100%;height:100%;object-fit:cover}
-.case-page .cp-info{padding:2.5rem}
-.case-page h1{font-size:clamp(22px,3vw,36px);font-weight:600;letter-spacing:.03em;margin-bottom:4px}
-.case-page .cp-tag{font-size:10px;letter-spacing:.16em;color:var(--soft);margin-bottom:1.8rem}
-.case-page .cp-desc{max-width:600px;font-size:12px;line-height:2;color:var(--soft);margin-bottom:2rem}
-.case-page .cp-credit{font-size:9px;color:var(--soft);padding-top:1.2rem;border-top:1px solid var(--line)}
-.case-page .cp-images{display:grid;grid-template-columns:repeat(2,1fr);margin:0 -1rem}
-.case-page .cp-images img{padding:1rem;aspect-ratio:4/3;object-fit:cover;width:100%}
-.case-page .cp-images .wide{grid-column:1/-1;aspect-ratio:16/7}
+/* ── Behance-style 案例內頁 ── */
+.case-header{padding:4rem 2.5rem 2rem;max-width:860px}
+.case-header h1{font-size:clamp(26px,3.6vw,44px);font-weight:600;letter-spacing:.03em;line-height:1.2;margin-bottom:.6rem}
+.case-header .ch-role{font-size:12px;color:var(--soft);margin-bottom:1.4rem}
+.case-header .ch-desc{font-size:13px;line-height:2;color:var(--soft);max-width:640px}
+.case-header .ch-meta{margin-top:2rem;display:flex;gap:2rem;font-size:10px;color:var(--soft)}
+.case-header .ch-meta span{letter-spacing:.1em;text-transform:uppercase}
 
-/* ── 聯絡 ── */
-.contact-info{padding:2.5rem}
-.contact-info .mail{font-size:clamp(18px,2.4vw,26px);font-weight:400;border-bottom:1px solid var(--ink);padding-bottom:4px;display:inline-block;margin:1rem 0 10px}
-.contact-info .sub{font-size:11px;color:var(--soft)}
+/* 圖片流 — 全寬、無間距 */
+.image-stream{width:100%}
+.image-stream img{width:100%;height:auto;display:block}
+
+/* 底部資訊列 */
+.case-footer{padding:2.5rem;border-top:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;font-size:10px;color:var(--soft)}
+.case-footer .cf-credit{display:flex;gap:2rem}
+.case-footer a:hover{color:var(--ink)}
 
 @media(max-width:760px){
   .sidebar{width:28%;min-width:120px;padding:2rem 1.2rem 2rem}
-  .main{margin-left:28%;padding:2rem}
-  .thumbs{grid-template-columns:1fr;margin:-.6rem}
+  .main{margin-left:28%}
+  .thumbs{grid-template-columns:1fr;margin:-.6rem;padding:2rem}
   .thumb{padding:.6rem}
-  .case-page .cp-images{grid-template-columns:1fr}
+  .case-header{padding:3rem 2rem 1.5rem}
 }
