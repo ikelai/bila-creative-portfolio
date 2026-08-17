@@ -154,6 +154,8 @@ def check_repository_safety(errors: list[str]) -> None:
             fail(errors, f"source/archive file must not be published: {path.relative_to(ROOT)}")
     if not (ROOT / "favicon.svg").is_file():
         fail(errors, "favicon.svg is missing")
+    if not (ROOT / "404.html").is_file():
+        fail(errors, "404.html is missing")
 
 
 def main() -> int:
