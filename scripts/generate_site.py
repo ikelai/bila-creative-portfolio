@@ -40,46 +40,65 @@ def head(title: str, description: str, css: str, prefix: str = "") -> str:
 def nav(prefix: str = "") -> str:
     return f'''<header class="top-nav">
 <a class="logo" href="{prefix}index.html">BILA Creative<span class="logo-sub">必樂創意行銷</span></a>
-<nav><a href="{prefix}works.html">Works</a><a href="{prefix}services.html">Services</a><a href="{prefix}about.html">About</a><a href="{prefix}contact.html">Contact</a></nav>
+<nav><a href="{prefix}works.html">Works</a><a href="{prefix}website-design.html">Website</a><a href="{prefix}services.html">Services</a><a href="{prefix}about.html">About</a><a href="{prefix}contact.html">Contact</a></nav>
 </header>'''
 
 
 def generate_index(cases: dict[str, dict]) -> str:
-    sections: list[str] = []
-    dots: list[str] = []
-    for slug, case in cases.items():
-        dots.append(f'<a href="#{esc(slug)}" class="dot"></a>')
-        sections.append(
-            f'''<section class="case-section" id="{esc(slug)}">
-<img class="cs-bg" src="{esc(case['hero'])}" alt="{esc(case['name'])}">
-<div class="cs-info">
-<div class="cs-role">{esc(case['role'])}</div>
-<div class="cs-client">{esc(case['name'])}</div>
-<div class="cs-tag">{esc(case['zh'])} · {esc(case['kicker'])}</div>
-</div>
-<a class="cs-link" href="work/{esc(slug)}.html">View Project →</a>
-</section>'''
+    selected = ("dell", "cathay", "chicony", "sakurayuki", "juheng", "laisen", "onpro", "yingsheng")
+    cards: list[str] = []
+    for number, slug in enumerate(selected, 1):
+        case = cases[slug]
+        cards.append(
+            f'''<a class="home-work-card" href="work/{esc(slug)}.html">
+<img src="{esc(case['hero'])}" alt="{esc(case['name'])}" loading="lazy">
+<div><span>{number:02d} · {esc(case['kicker'])}</span><h3>{esc(case['name'])}</h3><p>{esc(case['role'])}</p></div>
+</a>'''
         )
-    dot_nav = "".join(dots)
-    section_html = "".join(sections)
-    return f'''{head('BILA Creative 必樂創意行銷 — BILA Creative', '品牌設計、網站、社群與創意整合作品集 — Dell Technologies、國泰人壽、群光電子等品牌。', 'assets/style.css')}
+    return f'''{head('BILA Creative 必樂創意行銷 — 品牌、設計與數位整合', 'BILA Creative 將品牌、設計與數位整合為可被使用的商業成果。', 'assets/style.css')}
 <body>
-{nav()} 
-<nav class="scroll-hint" aria-label="案例導航">{dot_nav}</nav>
-{section_html}
-<script>
-(function(){{
- var dots=document.querySelectorAll('.scroll-hint .dot');
- var sections=document.querySelectorAll('.case-section');
- function update(){{
-  var i=0; sections.forEach(function(s,idx){{ var r=s.getBoundingClientRect(); if(r.top<window.innerHeight*.5)i=idx; }});
-  dots.forEach(function(d,idx){{ d.classList.toggle('active',idx===i); }});
- }}
- window.addEventListener('scroll',update,{{passive:true}});
- update();
-}})();
-</script></body></html>'''.replace("</header> \n", "</header>\n")
-
+{nav()}
+<main>
+<section class="home-hero">
+<img src="{esc(cases['dell']['hero'])}" alt="BILA Creative selected work">
+<div class="home-hero-copy">
+<p class="eyebrow">BILA CREATIVE · TAIPEI</p>
+<h1>讓品牌、設計與數位，<em>真正被使用。</em></h1>
+<p>我們為正在成長的品牌，整合品牌識別、網站與日常溝通，讓每個接觸點都能更清楚地傳達價值。</p>
+<div class="home-actions"><a class="button button-light" href="#selected-work">View Projects</a><a class="text-link" href="contact.html">Start a Project →</a></div>
+</div>
+</section>
+<section class="home-section" id="selected-work">
+<div class="section-heading"><div><p class="eyebrow">SELECTED WORK</p><h2>作品先說話。</h2></div><a class="text-link" href="works.html">View all projects →</a></div>
+<div class="home-work-grid">{''.join(cards)}</div>
+</section>
+<section class="home-section home-capabilities">
+<p class="eyebrow">WHAT BILA DOES</p>
+<h2>從第一個想法，<br>到每天都在使用的品牌體驗。</h2>
+<div class="capability-grid">
+<article><span>01</span><h3>Brand & Visual Identity</h3><p>品牌定位、識別系統與能夠長期運作的視覺語言。</p></article>
+<article><span>02</span><h3>Web & Digital Experience</h3><p>品牌網站、活動網站與轉換導向的數位體驗。</p><a href="website-design.html">Explore website design →</a></article>
+<article><span>03</span><h3>Campaign & Social Content</h3><p>把一次性的溝通，整理成可持續經營的內容與活動系統。</p></article>
+<article><span>04</span><h3>Graphic & Communication</h3><p>型錄、包裝與企業溝通，把複雜資訊變成可理解的品牌資產。</p></article>
+</div>
+</section>
+<section class="featured-case">
+<img src="{esc(cases['cathay']['hero'])}" alt="{esc(cases['cathay']['name'])}" loading="lazy">
+<div><p class="eyebrow">FEATURED CASE</p><h2>大型金融品牌的<br>年度數位溝通。</h2><p>從年度回顧網站到社群視覺，為國泰人壽建立連續、清楚且符合品牌標準的數位溝通。</p><a class="button" href="work/cathay.html">Explore the case</a></div>
+</section>
+<section class="home-section home-why">
+<p class="eyebrow">WHY BILA</p>
+<div class="why-grid"><h2>好看的設計，<br>只是開始。</h2><div><p>我們相信品牌不是一張主視覺，而是一連串被看見、被理解、被使用的經驗。</p><p>所以從策略、內容結構到最後的設計與製作，都以同一個商業問題為中心。</p><a class="text-link" href="about.html">How we work →</a></div></div>
+</section>
+<section class="home-section client-section">
+<p class="eyebrow">SELECTED EXPERIENCE</p>
+<div class="client-list"><span>Dell Technologies</span><span>國泰人壽</span><span>群光電子</span><span>ONPRO</span><span>RIZAP</span><span>鉅亨國際</span></div>
+</section>
+<section class="home-cta">
+<p class="eyebrow">START A PROJECT</p><h2>有一個品牌、網站或設計專案正在規劃？</h2><a class="button button-light" href="contact.html">Tell us about it</a><a class="text-link" href="mailto:hello@bila.com.tw">hello@bila.com.tw</a>
+</section>
+</main>
+</body></html>'''
 
 def generate_not_found() -> str:
     return f'''{head('找不到頁面 — BILA Creative', '找不到這個 BILA Creative 頁面，請返回作品首頁繼續瀏覽。', 'assets/style.css')}
