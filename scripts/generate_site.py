@@ -81,6 +81,20 @@ def generate_index(cases: dict[str, dict]) -> str:
 </script></body></html>'''.replace("</header> \n", "</header>\n")
 
 
+def generate_not_found() -> str:
+    return f'''{head('找不到頁面 — BILA Creative', '找不到這個 BILA Creative 頁面，請返回作品首頁繼續瀏覽。', 'assets/style.css')}
+<body>
+{nav()}
+<main class="contact-page">
+<p style="font-size:10px;letter-spacing:.22em;color:var(--soft)">ERROR · 404</p>
+<h1 style="font-size:clamp(38px,6vw,84px);font-weight:300;line-height:1.08;margin:1rem 0">這一頁不在這裡。</h1>
+<p style="font-size:13px;color:var(--soft)">網址可能已經更新，或這個頁面尚未建立。</p>
+<a class="mail" href="index.html">返回作品首頁 →</a>
+</main>
+</body>
+</html>'''
+
+
 def image_tag(path: str) -> str:
     return f'<img src="../{esc(path)}" alt="" loading="lazy">'
 
@@ -119,7 +133,10 @@ def generate_case(slug: str, case: dict) -> str:
 
 
 def outputs(cases: dict[str, dict]) -> dict[Path, str]:
-    generated = {ROOT / "index.html": generate_index(cases)}
+    generated = {
+        ROOT / "index.html": generate_index(cases),
+        ROOT / "404.html": generate_not_found(),
+    }
     generated.update({ROOT / "work" / f"{slug}.html": generate_case(slug, case) for slug, case in cases.items()})
     return generated
 
@@ -142,7 +159,7 @@ def main() -> int:
         for path in stale:
             print(f"- {path}")
         return 1
-    print(f"{'Checked' if args.check else 'Generated'} {len(cases) + 1} pages")
+    print(f"{'Checked' if args.check else 'Generated'} {len(cases) + 2} pages")
     return 0
 
 
