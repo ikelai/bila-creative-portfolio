@@ -23,7 +23,7 @@ def esc(value: object, *, quote: bool = True) -> str:
     return html.escape(str(value), quote=quote)
 
 
-def head(title: str, description: str, css: str) -> str:
+def head(title: str, description: str, css: str, prefix: str = "") -> str:
     return f'''<!DOCTYPE html>
 <html lang="zh-Hant-TW">
 <head>
@@ -31,6 +31,7 @@ def head(title: str, description: str, css: str) -> str:
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{esc(title)}</title>
 <meta name="description" content="{esc(description)}">
+<link rel="icon" href="{prefix}favicon.svg" type="image/svg+xml">
 {FONTS}
 <link rel="stylesheet" href="{css}">
 </head>'''
@@ -39,7 +40,7 @@ def head(title: str, description: str, css: str) -> str:
 def nav(prefix: str = "") -> str:
     return f'''<header class="top-nav">
 <a class="logo" href="{prefix}index.html">BILA Creative<span class="logo-sub">必樂創意行銷</span></a>
-<nav><a href="{prefix}index.html">Works</a><a href="{prefix}contact.html">Contact</a></nav>
+<nav><a href="{prefix}works.html">Works</a><a href="{prefix}services.html">Services</a><a href="{prefix}about.html">About</a><a href="{prefix}contact.html">Contact</a></nav>
 </header>'''
 
 
@@ -97,7 +98,7 @@ def generate_case(slug: str, case: dict) -> str:
     else:
         stream.extend(image_tag(path) for path in case.get("gallery") or [])
     meta = case["meta"]
-    return f'''{head(f'{case["name"]} — BILA Creative', case['summary'], '../assets/style.css')}
+    return f'''{head(f'{case["name"]} — BILA Creative', case['summary'], '../assets/style.css', '../')}
 <body>
 {nav('../')}
 <section class="case-header">

@@ -113,6 +113,8 @@ def check_html(errors: list[str]) -> None:
             fail(errors, f"{rel}: missing document title")
         if not parser.description:
             fail(errors, f"{rel}: missing meta description")
+        if not any(value.endswith("favicon.svg") for attr, value in parser.references if attr == "href"):
+            fail(errors, f"{rel}: missing SVG favicon link")
         if parser.images_without_alt:
             fail(errors, f"{rel}: {parser.images_without_alt} image(s) missing alt attributes")
         for _, value in parser.references:
@@ -150,6 +152,8 @@ def check_repository_safety(errors: list[str]) -> None:
             continue
         if path.is_file() and path.suffix.lower() in forbidden:
             fail(errors, f"source/archive file must not be published: {path.relative_to(ROOT)}")
+    if not (ROOT / "favicon.svg").is_file():
+        fail(errors, "favicon.svg is missing")
 
 
 def main() -> int:
