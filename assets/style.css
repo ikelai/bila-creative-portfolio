@@ -33,7 +33,7 @@ a{color:inherit;text-decoration:none}
 .case-section .cs-link:hover{opacity:1}
 
 /* ── 滾動指示器 ── */
-.scroll-hint{position:absolute;z-index:2;right:3vw;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;gap:8px}
+.scroll-hint{position:fixed;z-index:40;right:3vw;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;gap:8px}
 .scroll-hint .dot{width:6px;height:6px;border-radius:50%;background:#fff;opacity:.25;transition:opacity .3s}
 .scroll-hint .dot.active{opacity:.8}
 .scroll-hint a{display:block}
@@ -60,6 +60,45 @@ a{color:inherit;text-decoration:none}
 .contact-page{display:flex;flex-direction:column;justify-content:center;min-height:80svh;padding:0 3vw}
 .contact-page .mail{font-size:clamp(20px,3vw,36px);font-weight:300;border-bottom:1px solid var(--ink);padding-bottom:6px;display:inline-block;margin:1.2rem 0 .8rem}
 
+/* ── 資訊頁與作品索引 ── */
+.top-bar{position:relative;z-index:50;display:flex;justify-content:space-between;align-items:center;padding:24px 3vw;border-bottom:1px solid var(--line)}
+.top-bar .logo{font-size:15px;letter-spacing:.24em;text-transform:uppercase}
+.top-bar .zh{display:block;font-size:9px;letter-spacing:.16em;color:var(--soft)}
+.top-bar nav{display:flex;gap:24px;font-size:10px;letter-spacing:.16em;text-transform:uppercase}
+.top-bar nav a{color:var(--soft);transition:color .25s}
+.top-bar nav a:hover{color:var(--ink)}
+.hero,.page-top{min-height:48svh;display:flex;align-items:flex-end;padding:clamp(110px,16vw,220px) 3vw 6vw}
+.hero-content,.page-top>div{max-width:1050px}
+.eyebrow,.label{font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--soft);margin-bottom:22px}
+.hero h1,.page-top h1,.section h2,.manifesto h2,.cta-band h2{font-size:clamp(38px,6vw,84px);font-weight:300;letter-spacing:-.035em;line-height:1.08}
+.hero h1 em,.section h2 span,.manifesto h2 span,.cta-band h2 span{font-style:normal;color:var(--soft)}
+.sub,.lede{max-width:620px;margin-top:24px;font-size:14px;line-height:1.9;color:var(--soft)}
+.section{padding:8vw 3vw;border-top:1px solid var(--line)}
+.work-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line)}
+.work-card{background:var(--bg);display:grid;grid-template-columns:minmax(150px,42%) 1fr;min-height:320px;transition:background .25s}
+.work-card:hover{background:#f6f6f4}
+.work-card>img{width:100%;height:100%;object-fit:cover}
+.work-card-content{padding:clamp(24px,3vw,46px);display:flex;flex-direction:column}
+.w-index,.w-role,.w-cta{font-size:10px;letter-spacing:.12em;color:var(--soft)}
+.w-name{font-size:clamp(22px,2.5vw,38px);font-weight:300;line-height:1.1;margin:18px 0 8px}
+.w-desc{font-size:12px;line-height:1.8;color:var(--soft);margin:22px 0}
+.w-cta{display:flex;justify-content:space-between;margin-top:auto;padding-top:18px;border-top:1px solid var(--line)}
+.manifesto{padding:10vw 3vw;display:grid;grid-template-columns:1fr 1.35fr;gap:5vw;border-bottom:1px solid var(--line)}
+.manifesto .label{grid-column:1/-1}
+.manifesto .copy{font-size:14px;line-height:2;color:var(--soft);max-width:660px}
+.manifesto .byline{grid-column:2;font-size:10px;letter-spacing:.2em;color:var(--soft)}
+.svc-list{border-top:1px solid var(--line)}
+.svc{display:grid;grid-template-columns:80px 1fr 1.2fr;gap:3vw;padding:34px 0;border-bottom:1px solid var(--line);align-items:start}
+.s-num{font-size:10px;color:var(--soft)}
+.s-name{font-size:clamp(20px,2.5vw,34px);font-weight:300}
+.s-desc{font-size:13px;line-height:1.9;color:var(--soft)}
+.cta-band{padding:8vw 3vw;border-top:1px solid var(--line)}
+.cta-band .mail{display:inline-block;margin-top:34px;border-bottom:1px solid var(--ink);font-size:11px;letter-spacing:.18em;padding-bottom:7px}
+.site-foot{padding:40px 3vw;display:grid;grid-template-columns:1fr 1fr auto;gap:3vw;border-top:1px solid var(--line);font-size:10px;color:var(--soft)}
+.f-brand{font-size:13px;color:var(--ink);letter-spacing:.1em}
+.f-brand span{display:block;font-size:9px;color:var(--soft);margin-top:4px}
+.f-links{display:flex;gap:18px}
+
 /* ── 淡入動畫 ── */
 @media(prefers-reduced-motion:no-preference){
  .fade-in{opacity:0;transform:translateY(30px);transition:opacity .8s cubic-bezier(.16,1,.3,1),transform .8s cubic-bezier(.16,1,.3,1)}
@@ -71,4 +110,16 @@ a{color:inherit;text-decoration:none}
  .case-section .cs-info{padding:0 20px 36px}
  .case-header{padding:4rem 20px 1.5rem}
  .case-footer{flex-direction:column;gap:16px;align-items:flex-start}
+ .top-bar{padding:18px 20px}
+ .top-bar nav{gap:12px}
+ .hero,.page-top,.section,.manifesto,.cta-band{padding-left:20px;padding-right:20px}
+ .work-grid{grid-template-columns:1fr}
+ .work-card{grid-template-columns:1fr;min-height:0}
+ .work-card>img{aspect-ratio:16/10}
+ .manifesto{grid-template-columns:1fr}
+ .manifesto .byline{grid-column:1}
+ .svc{grid-template-columns:42px 1fr}
+ .s-desc{grid-column:2}
+ .site-foot{grid-template-columns:1fr;padding:32px 20px}
+ .scroll-hint{display:none}
 }
