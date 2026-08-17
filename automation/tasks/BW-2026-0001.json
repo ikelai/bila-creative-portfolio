@@ -1,0 +1,25 @@
+{
+  "task_id": "BW-2026-0001",
+  "project_id": "P-2026-0005",
+  "issued_at": "2026-08-17T04:12:39Z",
+  "status": "READY",
+  "scope": "Run a read-only website health check and return a machine-readable result without changing published content.",
+  "inputs": [
+    {
+      "kind": "GITHUB",
+      "location": "https://github.com/ikelai/bila-creative-portfolio",
+      "access": "READ_ONLY"
+    }
+  ],
+  "acceptance": [
+    "Run python3 scripts/generate_site.py --check successfully.",
+    "Run python3 scripts/validate_site.py successfully.",
+    "Create automation/results/BW-2026-0001.json on an agent/BW-2026-0001-healthcheck branch.",
+    "Do not change website content, NAS originals, Wix state, or the main branch directly."
+  ],
+  "safety": {
+    "nas_originals": "READ_ONLY",
+    "direct_main_push": false,
+    "secrets_in_repo": false
+  }
+}

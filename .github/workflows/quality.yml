@@ -25,3 +25,4 @@ jobs:
         run: |
           python3 scripts/generate_site.py --check
           python3 scripts/validate_site.py
+          python3 scripts/validate_automation.py
