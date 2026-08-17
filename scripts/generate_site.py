@@ -45,40 +45,45 @@ def nav(prefix: str = "") -> str:
 
 
 def generate_index(cases: dict[str, dict]) -> str:
-    sections: list[str] = []
-    dots: list[str] = []
-    for slug, case in cases.items():
-        dots.append(f'<a href="#{esc(slug)}" class="dot"></a>')
-        sections.append(
-            f'''<section class="case-section" id="{esc(slug)}">
-<img class="cs-bg" src="{esc(case['hero'])}" alt="{esc(case['name'])}">
-<div class="cs-info">
-<div class="cs-role">{esc(case['role'])}</div>
-<div class="cs-client">{esc(case['name'])}</div>
-<div class="cs-tag">{esc(case['zh'])} · {esc(case['kicker'])}</div>
-</div>
-<a class="cs-link" href="work/{esc(slug)}.html">View Project →</a>
-</section>'''
-        )
-    dot_nav = "".join(dots)
-    section_html = "".join(sections)
-    return f'''{head('BILA Creative 必樂創意行銷 — BILA Creative', '品牌設計、網站、社群與創意整合作品集 — Dell Technologies、國泰人壽、群光電子等品牌。', 'assets/style.css')}
-<body>
-{nav()} 
-<nav class="scroll-hint" aria-label="案例導航">{dot_nav}</nav>
-{section_html}
-<script>
-(function(){{
- var dots=document.querySelectorAll('.scroll-hint .dot');
- var sections=document.querySelectorAll('.case-section');
- function update(){{
-  var i=0; sections.forEach(function(s,idx){{ var r=s.getBoundingClientRect(); if(r.top<window.innerHeight*.5)i=idx; }});
-  dots.forEach(function(d,idx){{ d.classList.toggle('active',idx===i); }});
- }}
- window.addEventListener('scroll',update,{{passive:true}});
- update();
-}})();
-</script></body></html>'''.replace("</header> \n", "</header>\n")
+    featured = ("dell", "cathay", "yingsheng")
+    media = {
+        "dell": (
+            "images/dell/dell-06-00-封面.jpg",
+            "images/dell/dell-05-2021_DELL_Q1平面型錄_設計完稿_OL_FA-0604_1.jpg",
+        ),
+        "cathay": (
+            "images/cathay/cathay-01-2025_國泰人壽_banner_0119_02-主視覺篇_入口網站_550x2.jpg",
+            "images/cathay/cathay-03-2025_國泰人壽_banner_0119_02-主視覺篇_FB_1080x10.jpg",
+        ),
+        "yingsheng": (
+            "images/yingsheng/yingsheng-01-迎盛-BLIKSEN-型錄設計方案書_1204-01.jpg",
+            "images/yingsheng/yingsheng-05-30-LOGO.jpg",
+        ),
+    }
+    stories: list[str] = []
+    for index, slug in enumerate(featured, 1):
+        case = cases[slug]
+        primary, secondary = media[slug]
+        stories.append(f'''<article class="editorial-case" id="{esc(slug)}">
+<div class="editorial-case-no">0{index}</div>
+<div class="editorial-case-copy"><p class="editorial-kicker">{esc(case['kicker'])}</p>
+<h2>{esc(case['name'])}</h2><p class="editorial-zh">{esc(case['zh'])}</p>
+<p class="editorial-role">{esc(case['role'])}</p>
+<p class="editorial-summary">{esc(case['summary'])}</p>
+<a class="editorial-link" href="work/{esc(slug)}.html">閱讀案例 <span>→</span></a></div>
+<div class="editorial-media"><img src="{esc(primary)}" alt="{esc(case['name'])} 作品選圖"><img class="editorial-secondary" src="{esc(secondary)}" alt="" loading="lazy"></div>
+</article>''')
+    return f'''{head('BILA Creative 必樂創意行銷 — Selected Works', 'BILA Creative 精選案例：Dell Technologies、國泰人壽與迎盛 BLIKSEN 的品牌與數位溝通設計。', 'assets/style.css')}
+<body class="editorial-body">
+{nav()}
+<main>
+<section class="editorial-intro"><p class="editorial-index">BILA CREATIVE / SELECTED WORKS / 2026</p>
+<h1>設計不是把畫面<br>塞得更滿。<br><em>是讓品牌被看懂。</em></h1>
+<div class="editorial-intro-bottom"><p>必樂以設計系統、數位體驗與長期製作能力，幫品牌把複雜的事情說清楚。</p><a href="#dell">向下閱讀 <span>↓</span></a></div></section>
+<section class="editorial-statement"><p>三個案例，三種尺度：全球科技品牌的在地化系統、金融品牌的年度數位溝通，以及 B2B 企業的識別與型錄重整。</p></section>
+<section class="editorial-cases">{"".join(stories)}</section>
+<section class="editorial-closing"><p class="editorial-index">BILA CREATIVE / TAIPEI</p><h2>有一件事值得<br><em>重新說清楚？</em></h2><a class="editorial-link" href="contact.html">開始一個專案 <span>→</span></a></section>
+</main></body></html>'''
 
 
 def generate_not_found() -> str:
